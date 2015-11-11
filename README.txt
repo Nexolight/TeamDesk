@@ -74,7 +74,8 @@ possible.
 
 Requirements:
 You need a MySQL server, Something like Tomcat (I never tried it with JBoss
-or Glassfish) and Java.
+or Glassfish), and Java. I would recommend you to use a Linux host. Windows
+hosts may have some problems with character encoding.
 
 1.0 
 You will find a .sql dump in the /Projectfiles/builds folder
