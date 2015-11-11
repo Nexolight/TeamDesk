@@ -40,10 +40,10 @@ About the Project
 -----------------
 Teamdesk was initiated at the beginning of January 2014 and was 
 actively developed until August 2015. A first level support employee called
-Lamoza Rodrigo gave me (At this time a software apprentice) this task. 
-As I've been developing the application more and more ideas came to my mind. 
-I asked them to continue the work a little bit longer as initially planed 
-and they agreed very quick. 
+Lamoza Rodrigo gave me (At this time a software engineerer apprentice) 
+this task. As I've been developing the application more and more ideas came 
+to my mind. I asked them to continue the work a little bit longer as initially 
+planed and they agreed very quick. 
 
 I (Lucy von Känel) was the only developer until this date and I'm still
 the only one. This was my first really big project and one of those
