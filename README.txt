@@ -63,7 +63,7 @@ I still wouldn't be happy about that even if you're allowed to do so.
 However finnaly I dediced to use the Artistic Licence 2.0. for some reasons.
 Well I should say "we" since I made this project at work for the 
 Federal Departement of Defence (Switzerland). Luckily they allowed me to
-choose a licence and publish this project uder some conditions.
+choose a licence and publish this project under some conditions.
 
 
 ################################################################################
