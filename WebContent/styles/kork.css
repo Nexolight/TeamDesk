@@ -1,0 +1,2224 @@
+/**
+*
+* Copyright (C) 2014-2015 Inc. All Rights Reserved.
+* 
+* Federal Departement of Defence, Civil Protection and Sport,
+* Armed Forces Command Support Organisation
+* 
+* and
+* 
+* Lucy von Känel - snow.dream.ch@gmail.com
+* 
+* ---------------------------------------------------------------------
+* This file (code) is part of the project "TeamDesk"
+* as well as a subject of the Artistic Licence 2.0.
+* 
+* See LICENCE.txt or https://opensource.org/licenses/Artistic-2.0
+* 
+* The code comes "as is". There is no waranty about it's functionality,
+* merchantability and / or fitness for a particular purpose.
+* No matter if expressed or implied.
+* ---------------------------------------------------------------------
+*
+*/
+
+
+@font-face {
+    font-family: Verdana;
+    src: url("./fonts/verdana.woff");
+}
+
+html{
+	height: 100%;
+	width: 100%;
+}
+
+
+body#body{
+	background-image: url("../img/kork/textur.jpg");
+	repeat: auto;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+div#header{
+	width: 100%;
+	height: 50px;
+	margin: 0px;
+	padding: 0px;
+	background-color: #8d411c;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position: relative;
+	z-index: 3000000;
+	border-bottom: 2px solid #260d01;
+}
+
+div#header div#header_textholder{
+	width: calc(100% - 340px);
+	height: 14px;
+	overflow: hidden;
+	margin: 0px;
+	padding: 18px 30px 18px 30px;
+	float: left;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: Verdana;
+	color: #F3C97F;
+	cursor: default;
+}
+
+div#header div#header_logoholder{
+	width: 250px;
+	height: 50px;
+	margin: 0px;
+	padding: 0px 30px 0px 0px;
+	float: right;
+	background-repeat: no-repeat;
+	background-image: url("../img/kork/logo.png");
+}
+
+div#content{
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: calc(100% - 52px);
+	box-shadow: inset 0px 0px 15px #260d01;
+	overflow: hidden;
+}
+
+div#content div#logonholder{
+	position: absolute;
+	width: 400px;
+	height: auto;
+	left: calc(50% - 200px);
+	background-color: #260d01;
+	border-radius: 10px 10px 0px 0px;
+	border: 2px solid #260d01;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+
+div#content div#logonholder:hover{
+	box-shadow: 0px 0px 10px #260d01;
+}
+
+div#logonholder div#logonholder_header{
+	background-color: #8d411c;
+	color: #F3C97F;
+	width: calc(100% - 20px);
+	height: 20px;
+	margin: 0px;
+	padding: 3px 10px 3px 10px;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: Verdana;
+	border-radius: 7px 7px 0px 0px;
+	cursor: move;
+}
+
+div#logonholder div#logonholder_content{
+	border-top: 2px solid #260d01;
+	background-color: #F3C97F;
+	height: calc((100% - 28px) - 20px);
+	width: calc(100% - 20px);
+	padding: 10px;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Verdana;
+	color: #260d01;
+}
+
+div#logonholder div#logonholder_content_form{
+	margin: 10px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	width:100%;
+}
+
+div#logonholder select#logonholder_content_select{
+	width: 100%;
+}
+
+div#logonholder textarea#logonholder_content_textarea{
+	width: calc(100% - 15px);
+	height: 100px;
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+div#logonholder div#logonholder_content_passwordholder{
+	width: 100%;
+	height: 26px;
+	margin: 10px 0px 0px 0px;
+	padding: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: Verdana;
+}
+
+div#logonholder input#logonholder_content_password{
+	float: right;
+	width: 75%;
+}
+
+div#logonholder div#logonholder_content_buttonholder{
+	width: 100%;
+	height: auto;
+	margin: 10px 0px 0px 0px;
+	padding: 10px 0px 0px 0px;
+	border-top: 1px solid #260d01;
+	position: relative;
+}
+
+div#logonholder div#logonholder_content_buttonholder button#logonholder_content_newgroup{
+	float: left;
+}
+
+div#logonholder div#logonholder_content_buttonholder button#logonholder_content_proceeed{
+	float: right;
+}
+
+div#content div#erroroverlay{
+	position: absolute;
+	width: 400px;
+	height: auto;
+	left: calc(50% - 200px);
+	background-color: #260d01;
+	border-radius: 10px 10px 0px 0px;
+	border: 2px solid #260d01;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+	display: none;
+	box-shadow: 0px 0px 10px #BE5F31;
+	z-index: 2000001;
+}
+
+div#erroroverlay div#erroroverlay_header{
+	background-color: #8d411c;
+	color: #F3C97F;
+	width: calc(100% - 20px);
+	height: 20px;
+	margin: 0px;
+	padding: 3px 10px 3px 10px;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: Verdana;
+	border-radius: 7px 7px 0px 0px;
+}
+
+div#erroroverlay div#erroroverlay_content{
+	border-top: 2px solid #260d01;
+	background-color: #F3C97F;
+	height: calc((100% - 28px) - 20px);
+	width: calc(100% - 20px);
+	padding: 10px;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Verdana;
+	color: #260d01;
+}
+
+div#erroroverlay div#erroroverlay_content form#erroroberlay_form{
+	width: 100px;
+	padding: 0px calc(50% - 50px);
+	margin: 10px 0px 0px 0px;
+}
+
+div#content div#surfaceholder{
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	display: none;
+	background-color: #FFECCA;
+}
+
+div#surfaceholder div#surface{
+	overflow: hidden;
+	position:relative;
+	cursor: default;
+	background-image: url("../img/kork/textur.jpg");
+	box-shadow: inset 0px 0px 15px #260d01;
+	border-top: 2px solid #260d01;
+	border-right: 2px solid #260d01;
+	border-bottom: 2px solid #260d01;
+	border-left: 2px solid #260d01;
+	z-index: 0;
+	box-shadow: 0px 0px 10px 3px #260d01;
+	margin: auto;
+}
+
+div#surfaceholder div#infobar{
+	background-color: #F3C97F;
+	border: 1px solid #260d01;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: Verdana;
+	color: #543C15;
+	position: absolute;
+	padding: 2px 10px;
+	line-height: 20px;
+	border-radius: 7px 7px 7px 7px;
+	height: 20px;
+	display: none;
+	z-index: 3000000;
+}
+
+div#surfaceholder div.warnbar{
+	background-color: #ffdb5d !important;
+	border: 1px solid #260d01 !important;
+	color: #543C15;
+}
+
+div#surfaceholder div#mmHolder{
+	position: absolute;
+	left: 30px;
+	bottom: 30px;
+	background-color: rgba(141, 65, 28, 0.25);
+	z-index: 1000000;
+	border-radius: 7px 7px 7px 7px;
+	border: 2px solid #260d01;
+	box-shadow: 0px 0px 5px #260d01;
+	overflow: hidden;
+}
+
+div#surfaceholder div#mmHolder div#mmViewport{
+	min-width: 5px;
+	min-height: 5px;
+	background-color: rgba(38, 13, 1, 0.5);
+	border-radius: 3px;
+	position: relative;
+}
+
+div#surfaceholder div#optionHolder{
+	position: absolute;
+	width: 80px;
+	height: auto;
+	right: -50px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+	z-index: 1000000;
+	display:none;
+}
+
+div#surfaceholder div#optionHolder div#optionHolder_slider{
+	width: 29px;
+	height: 128px;
+	padding: 10px 0px;
+	margin: 0px;
+	top: 0px;
+	bottom: calc(100% - 150px);
+	border-radius: 29px 0px 0px 29px;
+	position: absolute;
+	background-color: #8D411C;
+	border-left: 1px solid #260d01;
+	border-bottom: 1px solid #260d01;
+	box-shadow: 0px 0px 5px #260d01;
+	float: left;
+}
+
+div#surfaceholder div#optionHolder div#optionHolder_slider span#optionHolder_slidertext{
+	font-size: 14px;
+	font-weight: bold;
+	font-family: Verdana;
+	color: #F3C97F;
+	display: block;
+	width: 128px;
+	height: 29px;
+	text-align: center;
+	transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	-ms-transform-origin: 0 0;
+	-webkit-transform-origin: 0 0;
+	-o-transform-origin: 0 0;
+	transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	top: 100%;
+	line-height: 29px;
+	position: relative;
+}
+
+div#surfaceholder div#optionHolder div#optionHolder_options{
+	width: 29px;
+	height: auto;
+	float: right;
+	margin: 0px;
+	padding: 10px 10px;
+	background-color: #8D411C;
+	border-left: 1px solid #260d01;
+	border-top: 1px solid #260d01;
+	border-bottom: 1px solid #260d01;
+	border-radius: 0px 0px 0px 10px;
+	box-shadow: 0px 0px 5px #260d01;
+}
+
+div#surfaceholder div#optionHolder div#optionHolder_options div#option_icon_write{
+	background-image: url("../img/kork/icon_write.png");
+}
+
+div#surfaceholder div#optionHolder div#optionHolder_options div#option_icon_archiv{
+	background-image: url("../img/kork/icon_archiv.png");
+}
+
+div#surfaceholder div#optionHolder div#optionHolder_options div#option_icon_settings{
+	background-image: url("../img/kork/icon_settings.png");
+}
+
+div#surfaceholder div#optionHolder div#optionHolder_options div#option_icon_info{
+	background-image: url("../img/kork/icon_info.png");
+}
+
+div#surfaceholder div#optionHolder div#optionHolder_options div#option_icon_logout{
+	background-image: url("../img/kork/icon_logout.png");
+}
+
+div#surface div#createNoteOverlay{
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	z-index: 999999;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+	display: none;
+}
+
+div#surface div#createNoteOverlay div#createNoteOverlay_flashcolor{
+	color: #FFECCA;
+	display: none;
+}
+
+div#surface div#createNoteOverlay div#createNoteOverlay_flashlayer{
+	position: absolute;
+	width: calc(100% - 25px);
+	height: 100%;
+	border-radius: 10px;
+	z-index: 999997;
+	right: 0px;
+}
+
+div#createNoteOverlay div#createNoteOverlay_prioholder{
+	background-color: #FFFFFF;
+	border-top: 2px solid #260d01;
+	border-left: 2px solid #260d01;
+	border-right: 2px solid #260d01;
+	border-radius: 10px 10px 10px 0px;
+	position: absolute;
+	right: -10px;
+	height: 56px;
+	top: -47px;
+	z-index: 999998;
+	padding: 10px 10px;
+	width: auto;
+	cursor: move;
+}
+
+div#createNoteOverlay div#createNoteOverlay_prioholder div#createNoteOverlay_prioholder_text{
+	margin: 0px;
+	padding: 0px;
+	float: right;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: Verdana;
+}
+
+div#createNoteOverlay div#createNoteOverlay_prioholder select#createNoteOverlay_prioselect{
+	width: auto;
+	margin: 0px 0px 0px 10px;
+	padding: 0px;
+}
+
+div#createNoteOverlay div#createNoteOverlay_maincontent{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	z-index: 999999;
+}
+
+div#createNoteOverlay div#createNoteOverlay_maincontent div#note_attachementholder{
+	z-index: 999997;
+}
+
+div#createNoteOverlay div#createNoteOverlay_maincontent div#createNoteOverlay_customcontent{
+	box-shadow: 0px 0px 10px #260d01;
+	height: calc(100% - 33px);
+	width: calc(100% - 25px);
+	float: right;
+	z-index: 999998;
+	position: relative;
+	border-radius: 10px 10px 0px 0px;
+	background-color: #260d01;
+}
+
+div#createNoteOverlay div#createNoteOverlay_maincontent div#createNoteOverlay_header{
+	height: 30px;
+	width: calc(100% - 4px);
+	position: relative;
+	overflow: hidden;
+	border-top: 2px solid #260d01;
+	border-right: 2px solid #260d01;
+	border-left: 2px solid #260d01;
+	border-bottom: 1px solid #260d01;
+	border-radius: 10px 10px 0px 0px;
+	z-index: 999998;
+	float: left;
+}
+
+div#createNoteOverlay div#createNoteOverlay_maincontent  div#createNoteOverlay_editoptions_holder{
+	width: auto;
+	height: calc(100% - 76px);
+	padding: 0px 10px 10px 0px;
+	background-color: #8D411C;
+	border-right: 1px solid #260D01;
+	border-top: 1px solid #260D01;
+	border-bottom: 1px solid #260D01;
+	border-radius: 0px 10px 10px 0px;
+	z-index: 999998;
+	left: 100%;
+	top: 33px;
+	position:absolute;
+}
+
+div#createNoteOverlay div#createNoteOverlay_maincontent  div#createNoteOverlay_editoptions_holder div#edit_icon_bold{
+	background-image: url("../img/kork/icon_bold.png");
+}
+
+div#createNoteOverlay div#createNoteOverlay_maincontent  div#createNoteOverlay_editoptions_holder div#edit_icon_italic{
+	background-image: url("../img/kork/icon_italic.png");
+}
+
+div#createNoteOverlay div#createNoteOverlay_maincontent  div#createNoteOverlay_editoptions_holder div#edit_icon_underlined{
+	background-image: url("../img/kork/icon_underlined.png");
+}
+
+div#createNoteOverlay div#createNoteOverlay_maincontent  div#createNoteOverlay_editoptions_holder div#edit_icon_image{
+	background-image: url("../img/kork/icon_image.png");
+}
+
+div#createNoteOverlay div#createNoteOverlay_maincontent  div#createNoteOverlay_editoptions_holder div#edit_icon_video{
+	background-image: url("../img/kork/icon_video.png");
+}
+
+div#createNoteOverlay div#createNoteOverlay_maincontent  div#createNoteOverlay_editoptions_holder div#edit_icon_table{
+	background-image: url("../img/kork/icon_table.png");
+}
+
+div#createNoteOverlay div#createNoteOverlay_maincontent  div#createNoteOverlay_editoptions_holder div#edit_icon_timer{
+	background-image: url("../img/kork/icon_timer.png");
+}
+
+
+div#createNoteOverlay div#createNoteOverlay_maincontent div#createNoteOverlay_notecontent{
+	position: relative;
+	width: calc(100% - 24px);
+	max-width: calc(100% - 24px);
+	height: calc(100% - 52px);
+	max-height: calc(100% - 52px);
+	white-space: auto;
+	padding: 10px;
+	background-color: #FFECCA;
+	color: #543c15;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Verdana;
+	border-left: 2px solid #260d01;
+	border-right: 2px solid #260d01;
+	cursor: text;
+	z-index: 999998;
+	float: left;
+	tab-index: 1;
+	overflow: hidden;
+	-webkit-touch-callout: text;
+	-webkit-user-select: text;
+	-khtml-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+}
+
+div.attachment_tab{
+	display: none;
+	position: relative;
+	width: calc(100% - 24px);
+	max-width: calc(100% - 24px);
+	height: calc(100% - 52px);
+	max-height: calc(100% - 52px);
+	white-space: auto;
+	padding: 10px;
+	background-color: #FFECCA;
+	color: #543c15;
+	font-size: 8px;
+	font-weight: normal;
+	font-family: Verdana;
+	border-left: 2px solid #260d01;
+	border-right: 2px solid #260d01;
+	cursor: default;
+	z-index: 999998;
+	float: left;
+	tab-index: 1;
+	overflow: auto;
+	-webkit-touch-callout: text;
+	-webkit-user-select: text;
+	-khtml-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+}
+
+div.attachment_tab div.attachment_row{
+	display: block;
+	width: 100%;
+	height: 40px;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #260D01;
+	margin-top: 10px;
+	overflow: hidden;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+div.attachment_icon{
+	width: 40px;
+	height: 40px;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	background-image: url("../img/kork/icon_generic_file.png");
+}
+
+div.attachment_remove{
+	width:18px;
+	height:18px;
+	position:relative;
+	float: right;
+	margin: 0px;
+	padding: 0px;
+	background-image: url("../img/kork/icon_attachment_remove.png");
+	opacity: 0;
+	cursor: pointer;
+}
+
+div.attachment_icon span{
+	display: block;
+	width: 100%;
+	height: calc(100% - 20px);
+	text-align: center;
+	color: #8D411C;
+	font-size: 8px;
+	font-weight: bold;
+	font-family: Verdana;
+	margin-top: 20px;
+	text-indent: -4px;
+}
+
+div.attachment_info{
+	width: calc(100% - 40px);
+	height: 40px;
+	margin: 0px;
+	padding: 0px;
+	float: right;
+}
+
+div.attachment_info a{
+	color: #8D411C;
+	font-size: 10px;
+	display: block;
+	float: left;
+	width: calc(100% - 18px);
+	text-indent: 10px;
+	white-space: nowrap;
+	height: 18px;
+}
+
+div.attachment_info span.attachment_infoline{
+	font-size: 8px;
+	display: block;
+	text-indent: 10px;
+	white-space: nowrap;
+	height: 11px;
+	clear: both;
+}
+
+div.attachment_info a:hover{
+	font-weight: bold;
+}
+
+div#createNoteOverlay div#createNoteOverlay_maincontent div#createNoteOverlay_notecontent div.videoholder{
+	display: inline-block;
+	position: relative;
+	width: auto;
+	height: auto;
+	-webkit-touch-focus: none;
+	-webkit-user-focus: none;
+	-khtml-user-focus: none;
+	-moz-user-focus: none;
+	-ms-user-focus: none;
+	user-focus: none;
+}
+
+div#createNoteOverlay div#createNoteOverlay_maincontent div#createNoteOverlay_notecontent video.videoframe{
+	width: auto;
+	height: auto;
+	border:0px none;
+	margin: 0px;
+	padding: 0px;
+	cursor: default;
+}
+
+div#createNoteOverlay div#createNoteOverlay_maincontent div#createNoteOverlay_notecontent div.frame_resize{
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	left: calc(100% - 8px);
+	top: calc(100% + 5px);
+	border-radius: 4px;
+	cursor: move;
+	background-color: #F3C97F;
+	border: 1px solid #260D01;
+}
+
+div#createNoteOverlay div#createNoteOverlay_maincontent div#createNoteOverlay_notefooter{
+	height: 30px;
+	width: calc(100% - 29px);
+	position: relative;
+	float: right;
+	border-top: 1px solid #260d01;
+	border-right: 2px solid #260d01;
+	border-left: 2px solid #260d01;
+	border-bottom: 2px solid #260d01;
+	border-radius: 0px 0px 10px 10px;
+	background-color: #8d411c;
+	color: #F3C97F;
+	z-index: 999997;
+	box-shadow: 0px 0px 10px #260d01;
+}
+
+div#createNoteOverlay div#createNoteOverlay_resize{
+	padding: 7px;
+	width: 16px;
+	height: 16px;
+	background-image: url("../img/kork/icon_resize.png");
+	float: right;
+	cursor: move; 
+}
+
+div#createNoteOverlay select#createNoteOverlay_colors{
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Verdana;
+	margin: 7px 0px 7px 7px;
+	height: 16px;
+	border: none;
+	width: calc(100% - 37px);
+	float: left;
+	overflow: hidden;
+	baclground-color: #F3C97F;
+}
+
+div#createNoteOverlay input#createNoteOverlay_title{
+	cursor: text;
+	width: calc(100% - 82px);
+	height: 30px;
+	margin: 0px;
+	padding: 0px 10px;
+	border: none;
+	border-radius: 7px 0px 0px 0px;
+	text-align: center;
+	background-color: #F3C97F;
+	color: #543C15;
+	float: left;
+	tab-index: 0;
+}
+
+div#createNoteOverlay div#createNoteOverlay_close{
+	width: 30px;
+	height: 30px;
+	background-color: #8d411c;
+	border-radius: 0px 8px 0px 0px;
+	border-left: 1px solid #543C15;
+	background-image: url("../img/kork/icon_close.png");
+	float: right;
+	cursor: pointer;
+}
+
+div#createNoteOverlay div#createNoteOverlay_apply{
+	width: 30px;
+	height: 30px;
+	background-color: #8d411c;
+	background-image: url("../img/kork/icon_apply.png");
+	border-left: 1px solid #543C15;
+	float: left;
+	cursor: pointer;
+}
+
+div#popover_holder div#popover_AddImage div:first-child{
+	margin-top: 0px;
+}
+
+div#popover_holder input#popover_AddImage_sizeX{
+	width: 50px;
+}
+
+div#popover_holder input#popover_AddImage_sizeY{
+	width: 50px;
+}
+
+div#popover_holder input#popover_AddMovie_sizeX{
+	width: 50px;
+}
+
+div#popover_holder input#popover_AddMovie_sizeY{
+	width: 50px;
+}
+
+div#popover_holder input#popover_AddTable_Cols{
+	width: 25px;
+}
+
+div#popover_holder input#popover_AddTable_ColumnX{
+	width: 50px;
+	margin-left: 15px;
+}
+
+div#popover_holder input#popover_AddTable_RowY{
+	width: 50px;
+	margin-left: 15px;
+}
+
+div#popover_holder input#popover_AddTable_Rows{
+	width: 25px;
+}
+
+div#popover_holder input#popover_AddTable_sizeX{
+	width: 50px;
+}
+
+div#popover_holder input#popover_AddTable_sizeY{
+	width: 50px;
+}
+
+div#popover_holder input.popover_SetTimer_date{
+	width: 80px;
+}
+
+div#popover_holder input.popover_SetTimer_time{
+	width: 40px;
+}
+
+div#popover_holder input#popover_AddImage_path,
+div#popover_holder input#popover_AddMovie_path,
+div#popover_holder input#popover_AddAtt_path, 
+div#popover_holder input#popover_AddAtt_name{
+	width: calc(100% - 15px);
+	display: block;
+	margin-top: 5px;
+}
+
+div#popover_shadow{
+	width: 100%;
+	height: calc(100% - 52px);
+	background-color: #260D01;
+	opacity: 0.5;
+	left: 0px;
+	top: 52px;
+	position: absolute;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+	z-index: 2000000;
+	display: none;
+}
+
+div#popover_holder{
+	position: absolute;
+	min-width: 250px;
+	max-width: 400px;
+	width: auto;
+	height: auto;
+	padding: 0px;
+	margin: 0px;
+	border: 2px solid #260d01;
+	display: none;
+	z-index: 2000001;
+	border-radius: 10px 10px 0px 0px;
+	background-color: #F3C97F;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	overflow: hidden;
+}
+
+div.popover_holderXL{
+	max-width: 90% !important;
+	max-height: 90% !important;
+}
+
+div#popover_holder div#popover_header{
+	border-radius: 7px 7px 0px 0px;
+	padding: 0px;
+	text-indent: 10px;
+	line-height: 27px;
+	margin: 0px;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: Verdana;
+	color: #F3C97F;
+	background-color: #8D411C;
+	cursor: move;
+	width: 100%;
+}
+
+div#popover_holder div#popover_content{
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Verdana;
+	padding: 10px 10px 0px 10px;
+	margin: 0px;
+	background-color: #F3C97F;
+	border-top: 1px solid #260d01;
+	cursor: default;
+	width: calc(100% - 20px);
+}
+
+div#popover_holder div#popover_flash{
+	display: none;
+	color: #260d01;
+}
+
+div#popover_holder div.popover_row{
+	display: block;
+	margin-top: 5px;
+	color: #260D01;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Verdana;
+}
+
+div#popover_holder button#popover_browse{
+	width: 75px;
+	margin: 0px;
+	padding: 0px;
+}
+
+div#popover_holder input#popover_file{
+	width: calc(100% - 115px);
+	cursor: default;
+}
+
+div#popover_holder div#popover_buttonholder{
+	padding: 15px 10px 10px 10px;
+	background-color: #F3C97F;
+	cursor: default;
+	float: left;
+	width: calc(100% - 20px);
+}
+
+div#popover_holder div#popover_buttonholder button#popover_apply{
+	float: left;
+}
+
+div#popover_holder div#popover_buttonholder button#popover_cancel{
+	float: right;
+}
+
+div#popover_holder div#popover_header div#popover_apply{
+	float: right;
+	width: 23px;
+	height: 23px;
+	position: relative;
+	margin: 2px;
+	padding: 0px;
+	background-image: url("../img/kork/icon_apply.png");
+	background-size: 27px 27px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	border-left: 1px solid #260D01;
+}
+
+div#popover_holder div#popover_header div#popover_cancel{
+	float: right;
+	width: 23px;
+	height: 23px;
+	position: relative;
+	margin: 2px;
+	padding: 0px;
+	background-image: url("../img/kork/icon_close.png");
+	background-size: 23px 23px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	border-left: 1px solid #260D01;
+}
+
+div#popover_holder div.popover_txtrow{
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+	color: #260D01;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: Verdana;
+}
+
+div#popover_holder div.popover_txtrow_text{
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+	color: #260D01;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Verdana;
+}
+
+select.default{
+	height: 26px;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: Verdana;
+	background-color: #FFECCA;
+	color: #543c15;
+	border: 2px inset #8d411c;
+	border-radius: 7px 7px 7px 7px;
+	cursor: pointer;
+}
+
+textarea.default{
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Verdana;
+	background-color: #FFECCA;
+	color: #543c15;
+	border: 2px inset #8d411c;
+	border-radius: 7px 7px 7px 7px;
+	cursor: default;
+	resize: none;
+	text-align: left;
+	padding: 5px;
+	margin: 0px;
+}
+
+button.default{
+	font-size: 12px;
+	font-weight: bold;
+	font-family: Verdana;
+	border: 2px outset #260d01;
+	background-color:#8d411c ;
+	color: #FFECCA;
+	border-radius: 7px 7px 7px 7px;
+	min-width: 96px;
+	height: 26px;
+	cursor: pointer;
+}
+
+button.default:hover{
+	border: 2px outset #260d01;
+	background-color: #BE5F31;
+}
+
+input.default{
+	width: 140px;
+	height: 22px;
+	border: 2px inset #260d01;
+	border-radius: 7px 7px 7px 7px;
+	background-color: #FFECCA;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: Verdana;
+	color: #543c15;
+	cursor: text;
+	margin: 0px;
+	padding: 0px 5px;
+}
+
+input.checkbox{
+	width: 25px;
+	height: 25px;
+	margin: 1px 0px 0px 0px;
+	padding: 0px;
+}
+
+span.inputspan{
+	line-height: 26px;
+}
+
+div.note_attachmentholder{
+	width: 25px;
+	height: calc(100% - 10px);
+	position: relative;
+	float: left;
+	padding: 10px 0px 0px 0px;
+	overflow: hidden;
+}
+
+div.note_attachmentholder div.note_attachmentpiece,
+div.note_attachmentholder div.note_attachmentpiece_actionholder{
+	width: 100%;
+	height: 40px;
+	cursor: pointer;
+}
+
+div.note_attachmentholder div.note_attachmentpiece_actionholder div.note_attachmentpiece_atticon{
+	cursor: default;
+}
+
+div.note_attachmentholder div.note_attachmentpiece_singel{
+	background-image: url("../img/kork/icon_attachment_bg.png");
+}
+
+div.note_attachmentholder div.note_attachmentpiece_start{
+	background-image: url("../img/kork/icon_attachment_bg_start.png");
+}
+
+div.note_attachmentholder div.note_attachmentpiece_sub{
+	background-image: url("../img/kork/icon_attachment_bg_sub.png");
+}
+
+div.note_attachmentholder div.note_attachmentpiece_end{
+	background-image: url("../img/kork/icon_attachment_bg_end.png");
+}
+
+div.note_attachmentholder div.note_attachmentpiece div.note_attachmentnumber{
+	color: #F3C97F;
+	font-size: 8px;
+	font-weight: bold;
+	font-family: Verdana;
+	text-align: center;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	pointer-events: none;
+}
+
+div.note_attachmentholder div.note_attachmentpiece_actionholder div#note_attachmentpiece_add,
+div.note_attachmentholder div.note_attachmentpiece_actionholder div.note_attachmentpiece_atticon,
+div.note_attachmentholder div.note_attachmentpiece div.note_attachmentpiece_image,
+div.note_attachmentholder div.note_attachmentpiece div.note_attachmentpiece_media,
+div.note_attachmentholder div.note_attachmentpiece div.note_attachmentpiece_doc,
+div.note_attachmentholder div.note_attachmentpiece div.note_attachmentpiece_archiv{
+	width: 100%;
+	height: 100%;
+}
+
+div.note_attachmentholder div.note_attachmentpiece_actionholder div#note_attachmentpiece_add{
+	background-image: url("../img/kork/icon_attachment_add.png");
+}
+
+div.note_attachmentholder div.note_attachmentpiece_actionholder div.note_attachmentpiece_atticon{
+	background-image: url("../img/kork/icon_attachment_icon.png");
+}
+
+div.note_attachmentholder div.note_attachmentpiece div.note_attachmentpiece_image{
+	background-image: url("../img/kork/icon_attachment_img.png");
+}
+
+div.note_attachmentholder div.note_attachmentpiece div.note_attachmentpiece_media{
+	background-image: url("../img/kork/icon_attachment_media.png");
+}
+
+div.note_attachmentholder div.note_attachmentpiece div.note_attachmentpiece_doc{
+	background-image: url("../img/kork/icon_attachment_doc.png");
+}
+
+div.note_attachmentholder div.note_attachmentpiece div.note_attachmentpiece_archiv{
+	background-image: url("../img/kork/icon_attachment_archiv.png");
+}
+
+
+div.TextWrap{
+   	word-wrap: break-word;
+   	word-break: break-all;
+}
+
+div.option_icon{
+	width: 30px;
+	height: 30px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+div.option_icon_small{
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	margin-top: 10px;
+	margin-left: 10px;
+	border-radius: 3px;
+	display: inline-block;
+	float: left;
+}
+
+div.option_icon_small_selected{
+	background-color: #BE5F31;
+}
+
+table.notetable{
+	border-collapse: collapse;
+}
+
+table.notetable, th.notetable, td.notetable{
+	border: 1px solid #260D01;
+	text-align: left;
+	margin: 0px;
+	padding: 0px;
+	vertical-align: top;
+}
+
+table.notetable_zebra{
+	border-collapse: collapse;
+	margin: 0px;
+	padding: 0px;
+}
+
+table.notetable_zebra, th.notetable_zebra, td.notetable_zebra_0, td.notetable_zebra_1{
+	border: 1px solid #260D01;
+}
+
+th.notetable_zebra{
+	text-align: left;
+	margin: 0px;
+	padding: 0px;
+	vertical-align: top;
+	background-color: #DFAA4C;
+	color: #543C15;
+	font-weight: bold;
+}
+
+td.notetable_zebra_0, td.notetable_zebra_1{
+	text-align: left;
+	margin: 0px;
+	padding: 0px;
+	vertical-align: top;
+	font-weight: normal;
+}
+
+td.notetable_zebra_0{
+	background-color: #FFECCA;
+	color: #543C15;
+}
+
+td.notetable_zebra_1{
+	background-color: #F3C97F;
+	color: #543C15;
+}
+
+div#surface div.oneNote{
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+	z-index: 0;
+}
+
+div#surface div.oneNote div.oneNote_flashlayer{
+	position: absolute;
+	width: calc(100% - 25px);
+	height: 100%;
+	z-index: 999997;
+	right: 0px;
+	border-radius: 10px;
+}
+
+div#surface div.oneNote div.oneNote_maincontent{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	z-index: 999999;
+	top: 0px;
+	left: 0px;
+}
+
+div#surface div.oneNote div.oneNote_prioholder{
+	background-color: #FFFFFF;
+	border-top: 2px solid #260d01;
+	border-left: 2px solid #260d01;
+	border-right: 2px solid #260d01;
+	border-radius: 70px;
+	position: absolute;
+	right: -35px;
+	height: 140px;
+	top: -70px;
+	z-index: 999998;
+	width: 140px;
+	cursor: move;
+}
+
+div#surface div.oneNote div.oneNote_prioholder div.oneNote_prioholder_text{
+	margin: 0px;
+	padding: 0px;
+	float: right;
+	text-align: center;
+	font-size: 35px;
+	font-weight: bold;
+	font-family: Verdana;
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 70px;
+}
+
+div#surface div.oneNote div.note_customcontent{
+	box-shadow: 0px 0px 10px #260d01;
+	height: calc(100% - 33px);
+	width: calc(100% - 25px);
+	float: right;
+	position: relative;
+	border-radius: 10px 10px 0px 0px;
+	background-color: #260d01;
+	z-index: 999998;
+}
+
+div#surface div.oneNote div.note_customcontent div.note_header{
+	height: 30px;
+	width: calc(100% - 4px);
+	position: relative;
+	overflow: hidden;
+	z-index: 999998;
+	border-top: 2px solid #260d01;
+	border-right: 2px solid #260d01;
+	border-left: 2px solid #260d01;
+	border-bottom: 1px solid #260d01;
+	border-radius: 10px 10px 0px 0px;
+	float: left;
+}
+
+div#surface div.oneNote div.note_customcontent div.note_header div.note_title{
+	cursor: default;
+	width: calc(100% - 82px);
+	height: 30px;
+	margin: 0px;
+	padding: 0px 10px;
+	border-radius: 7px 0px 0px 0px;
+	text-align: center;
+	background-color: #F3C97F;
+	color: #543C15;
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: Verdana;
+	line-height: 32px;
+}
+
+div#surface div.oneNote div.note_customcontent div.note_header div.note_edit{
+	width: 30px;
+	height: 30px;
+	background-color: #8d411c;
+	background-image: url("../img/kork/icon_write_small.png");
+	border-left: 1px solid #543C15;
+	float: left;
+	cursor: pointer;
+}
+
+div#surface div.oneNote div.note_customcontent div.note_header div.note_archive{
+	width: 30px;
+	height: 30px;
+	background-color: #8d411c;
+	border-radius: 0px 8px 0px 0px;
+	border-left: 1px solid #543C15;
+	background-image: url("../img/kork/icon_archiv_small.png");
+	float: right;
+	cursor: pointer;
+}
+
+div#surface div.oneNote div.note_customcontent div.note_notecontent{
+	position: relative;
+	cursor: default;
+	width: calc(100% - 24px);
+	max-width: calc(100% - 24px);
+	height: calc(100% - 52px);
+	max-height: calc(100% - 52px);
+	white-space: auto;
+	padding: 10px;
+	background-color: #FFECCA;
+	color: #543c15;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Verdana;
+	border-left: 2px solid #260d01;
+	border-right: 2px solid #260d01;
+	cursor: default;
+	z-index: 999998;
+	float: left;
+	overflow: hidden;
+}
+
+div#surface div.oneNote div.note_footer{
+	height: 30px;
+	width: calc(100% - 29px);
+	position: relative;
+	float: right;
+	border-top: 1px solid #260d01;
+	border-right: 2px solid #260d01;
+	border-left: 2px solid #260d01;
+	border-bottom: 2px solid #260d01;
+	border-radius: 0px 0px 10px 10px;
+	background-color: #8d411c;
+	color: #F3C97F;
+	z-index: 999997;
+	box-shadow: 0px 0px 10px #260d01;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Verdana;
+	line-height: 32px;
+}
+
+div#surface div.oneNote div.note_footer ul.note_defaultinfoholder{
+	width: calc(100% - 35px);
+	height: 18px;
+	padding: 0px;
+	margin: 5px 0px 5px 5px;
+	border-radius: 5px;
+	display: block;
+	border-collapse: collapse;
+	border: 1px solid #260D01;
+	background-color: #FFECCA;
+	overflow: hidden;
+	float: left;
+}
+
+div#surface div.oneNote div.note_footer li.note_footerrow{
+	display: block;
+	background-color: #FFECCA;
+	color: #543c15;
+	border-top: 1px solid #543c15;
+	border-bottom: 1px solid #543c15;
+	margin-top: -1px;
+	margin-bottom: -1px;
+	width: 100%;
+	height: 18px;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Verdana;
+	line-height: 18px;
+	border-radius: 5px;
+	text-indent: 5px;
+}
+
+div#surface div.oneNote div.note_footer div.note_footerexpandtrigger{
+	display: block;
+	float: right;
+	margin: 5px 5px 5px 0px;
+	width: 20px;
+	height: 20px;
+	padding: 0px;
+	cursor: pointer;
+}	
+
+div#surface div.oneNote div.note_footer div.note_footerexpandtrigger_close{
+	background-image: url("../img/kork/icon_expand.png");
+}
+
+div#surface div.oneNote div.note_footer div.note_footerexpandtrigger_open{
+	background-image: url("../img/kork/icon_expand.png");
+	transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+}
+
+
+div#surface div.oneNote div.note_footer ul.note_expandholder{
+	height:	auto;
+	max-height: 300px;
+	overflow: auto;
+	width: calc(100% -10px);
+	border-radius: 5px;
+	border: 1px solid #543c15;
+	padding: 0px;
+	margin: 0px 5px 5px 5px;
+	clear: both;
+	background-color: #FFECCA;
+	display: none;
+}
+
+div#surface div.oneNote div.note_footer li.note_expandrow{
+	color: #543c15;
+	border-top: 1px solid #543c15;
+	border-bottom: 1px solid #543c15;
+	margin-top: -1px;
+	margin-bottom: -1px;
+	width: 100%;
+	height: 16px;
+	font-size: 10px;
+	font-weight: normal;
+	font-family: Verdana;
+	line-height: 16px;
+	white-space: nowrap;
+	padding: 0px 5px 0px 5px;
+}
+
+div#surface div.oneNote div.oneNote_showComments{
+	width: 29px;
+	position: absolute;
+	height: 70px;
+	left: 100%;
+	color: #F3C97F;
+	background-color: #8d411c;
+	top: 10px;
+	border-top-right-radius: 30px 15px;
+	border-bottom-right-radius: 30px 15px;
+	background-repeat: no-repeat;
+	background-position: 0px 5px;
+	border-right: 1px solid #260d01;
+	border-bottom: 1px solid #260d01;
+	border-top: 1px solid #260d01;
+	background-image: url("../img/kork/icon_comments.png");
+	cursor: pointer;
+}
+
+div#surface div.oneNote div.oneNote_showComments span{
+	width: 100%;
+	display: block;
+	height: calc(100% - 44px);
+	font-size: 12px;
+	font-weight: bold;
+	font-family: Verdana;
+	position: relative;
+	text-align: center;
+	vertical-align: top;
+	padding: 6px 0px 0px 0px;
+	margin: 37px 0px 0px 0px;
+	border-top: 1px solid #260d01;
+}
+
+div#popover_holder div#popover_comments{
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+}
+
+div#popover_holder div#popover_comments div#popoverComments_historyarea{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	height: calc(100% - 143px);
+	overflow: auto;
+	font-family: Verdana;
+}
+
+div#popover_holder div#popover_comments div.popoverComments_onerow{
+	width: calc(100% - 22px);
+	margin: 10px 0px 0px 0px;
+	padding: 10px 10px 10px 10px;
+	position: relative;
+	background-color: #FFECCA;
+	border-radius: 10px;
+	border: 1px solid #260d01;
+	color: #260d01;
+}
+
+div#popover_holder div#popover_comments div.popoverComments_onerow:first-child{
+	margin: 0px !important;
+}
+
+div#popover_holder div#popover_comments div.popoverComments_logline{
+	width: 100%;
+	height: auto;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 0px 5px 0px;
+	line-height: 15px;
+	border-bottom: 1px solid #260d01;
+	position: relative;
+	overflow: hidden;
+	font-size: 12px;
+}
+
+div#popover_holder div#popover_comments span.popoverComments_logsegment{
+	font-weight: bold;
+	display: inline-block;
+	width: calc((100% / 3) - 3px);
+	margin-top: 10px;
+}
+
+div#popover_holder div#popover_comments span.popoverComments_logsegment:nth-child(1){
+	text-align: left;
+	margin-top: 0px !important;
+}
+
+div#popover_holder div#popover_comments span.popoverComments_logsegment:nth-child(2){
+	text-align: center;
+	margin-top: 0px !important;
+}
+
+div#popover_holder div#popover_comments span.popoverComments_logsegment:nth-child(3){
+	text-align: right;
+	margin-top: 0px !important;
+}
+
+div#popover_holder div#popover_comments span.popoverComments_logsegment:nth-child(4){
+	text-align: left;
+}
+
+div#popover_holder div#popover_comments span.popoverComments_logsegment:nth-child(5){
+	text-align: center;
+}
+
+div#popover_holder div#popover_comments span.popoverComments_logsegment:nth-child(6){
+	text-align: right;
+}
+
+div#popover_holder div#popover_comments span.popoverComments_logauthor,
+div#popover_holder div#popover_comments span.popoverComments_logip,
+div#popover_holder div#popover_comments span.popoverComments_logtime,
+div#popover_holder div#popover_comments div.popoverComments_editexpire{
+	font-weight: normal;
+	display: inline;
+}
+
+div#popover_holder div#popover_comments div.popoverComments_edit,
+div#popover_holder div#popover_comments div.popoverComments_remove{
+	cursor: pointer;
+}
+
+div#popover_holder div#popover_comments div.popoverComments_edit:hover,
+div#popover_holder div#popover_comments div.popoverComments_remove:hover{
+	text-decoration: underline;
+}
+
+div#popover_holder div#popover_comments div.popoverComments_commentline{
+	font-size: 14px;
+	font-weight: normal;
+}
+
+div#popover_holder div#popover_comments div#popoverComments_writearea{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	height: 113px;
+	clear: both;
+	margin: 10px 0px 0px 0px;
+	padding: 10px 0px 0px 0px;
+	border-top: 1px solid #260d01;
+}
+
+div#popover_holder div#popover_comments input#popoverComments_inputauthor{
+	width: calc(100% - 179px);
+	height: 15px;
+	margin: 0px 5px 0px 0px;
+	padding: 5px 10px 5px 10px;
+	float: left;
+	line-height: 15px;
+	font-size: 14px;
+}
+
+div#popover_holder div#popover_comments textarea#popoverComments_inputtext{
+	margin: 5px 5px 0px 0px;
+	width: calc(100% - 179px);
+	height: 65px;
+	padding: 5px 10px 5px 10px;
+	float: left;
+	pointer: text;
+	font-size: 14px;
+}
+
+div#popover_holder div#popover_comments button#popoverComments_sendcomment{
+	width: 146px;
+	height: 113px;
+	margin: 0px;
+	padding: 0px;
+	float: right;
+	pointer: text;
+}
+
+div#popover_holder div#popover_archiv{
+	position: relative;
+	margin: 0px 0px 10px 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+div#supertable div.actionbtnholder{
+	display: flex;
+	width: calc(100% - 10px);
+	margin: 0px;
+	padding: 5px;
+	background-color: #8D411C;
+}
+
+div#supertable div.actionbtnholder div.actionbtn{
+	width: 30px;
+	height: 30px;
+	padding: 0px;
+	margin: auto;
+	cursor: pointer;
+}
+
+div#supertable div.actionbtnholder div.btndelete{
+	background-image: url("../img/kork/icon_delete.png");
+}
+
+div#supertable div.actionbtnholder div.btnrestore{
+	background-image: url("../img/kork/icon_restore.png");
+}
+
+
+div.superTableHolder{
+	width: 100%;
+	max-height: 100%;
+}
+
+div.superTableHolder div.filterarea{
+	width: 100%;
+	height: 60px;
+	border-radius: 5px 5px 0px 0px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px;
+	background-color: #8D411C;
+	outline: 1px solid #8D411C;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+div.superTableHolder div.filterarea div.filtercolumn{
+	display: inline-block;
+	background-color: #8D411C;
+	outline: 1px solid #8D411C;
+}
+
+div.superTableHolder div.filterarea div.filtercolumn div.filtersubcolumn{
+	display: block;
+	width: 100%;
+	margin: 0px;
+	padding: 5px 0px 0px 0px;
+	overflow: show;
+}
+
+div.superTableHolder div.filterarea div.filtercolumn div.filtersubcolumn div.sorticon{
+	display: block;
+	width: 25px;
+	height: 25px;
+	margin: 0px auto 0px auto;
+	cursor: pointer;
+}
+
+div.superTableHolder div.filterarea div.filtercolumn div.filtersubcolumn div.sorticon_sortdisabled{
+	width: 19px;
+	height: 19px;
+	margin: 0px auto 0px auto;
+	display: block;
+	background-color: #F3C97F;
+	border: 3px solid #543c15;
+	border-radius: 10px;
+	box-shadow: inset 0px 0p 1px #543c15;
+	cursor: no-drop;
+}
+
+div.superTableHolder div.filterarea div.filtercolumn div.filtersubcolumn div.sorticon_nosort{
+	background-image: url("../img/kork/icon_sort.png");
+	transform: rotate(180deg);
+}
+
+div.superTableHolder div.filterarea div.filtercolumn div.filtersubcolumn div.sorticon_asc{
+	background-image: url("../img/kork/icon_sort.png");
+	transform: rotate(90deg);
+}
+
+div.superTableHolder div.filterarea div.filtercolumn div.filtersubcolumn div.sorticon_desc{
+	background-image: url("../img/kork/icon_sort.png");
+	transform: rotate(270deg);
+}
+
+div.superTableHolder div.filterarea div.filtercolumn div.filtersubcolumn input.filterinput{
+	padding: 0px;
+	margin: 0px;
+	text-indent: 3px;
+	width: 100%;
+	background-color: #FFECCA;
+	color: #260d01;
+	height: 25px;
+	border: none;
+}
+
+div.superTableHolder div.dataarea{
+	width: width: 100%;
+	height: calc(100% - 67px);
+	padding: 0px;
+	background-color: #F3C97F;
+	border-radius: 0px 0px 5px 5px;
+	margin: 0px;
+	border-top: 1px solid #260d01;
+	border-bottom: 1px solid #260d01;
+	overflow: auto;
+}
+
+div.superTableHolder div.dataarea table{
+	border-collapse: collapse;
+	width: 100%;
+	height: auto;
+}
+
+div.superTableHolder div.dataarea table tr,
+div.superTableHolder div.dataarea table th,
+div.superTableHolder div.dataarea table td{
+	border: 1px solid #260d01;
+}
+
+div.superTableHolder div.dataarea table th,
+div.superTableHolder div.dataarea table td{
+	padding: 5px;
+	text-align: left;
+	vertical-align: top;
+	min-width: 30px;
+}
+
+div.superTableHolder div.dataarea table th{
+	background-color: #8D411C;
+	color: #F3C97F;
+}
+
+div.superTableHolder div.dataarea table td{
+	background-color: #FFECCA;
+	color: #260d01;
+}
+
+div#popover_holder div#popover_groupadmin{
+	position: relative;
+	margin: 0px 0px 10px 0px;
+	padding: 0px;
+}
+
+div.clearfix{
+	clear:both;
+}
+
+
+div.multitabContainer{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+}
+
+div.multitabContainer div.tabholder{
+	width: 100%;
+	height: 30px;
+	margin: 0px;
+	padding: 0px;
+}
+
+div.multitabContainer div.tabholder div.onetab:first-child{
+	border-left: 1px solid #260d01;
+	border-top-left-radius: 7px;
+}
+
+div.multitabContainer div.tabholder div.onetab:last-child{
+	border-top-right-radius: 7px;
+}
+
+div.multitabContainer div.tabholder div.onetab{
+	font-size: 14px;
+	font-weight: bold;
+	font-family: Verdana;
+	line-height: 29px;
+	color: #F3C97F;
+	border-right: 1px solid #260d01;
+	border-top: 1px solid #260d01;
+	float: left;
+	padding: 0px 20px 0px 5px;
+	margin: 0px;
+	cursor: pointer;
+}
+
+div.multitabContainer div.tabholder div.onetab_active{
+	background-color: #BE5F31;
+}
+
+div.multitabContainer div.tabholder div.onetab_inactive{
+	background-color: #8D411C;
+}
+
+div.multitabContainer div.tabholder div.onetab_inactive:hover{
+	box-shadow: inset 0px 0px 15px #BE5F31;
+}
+
+div.multitabContainer div.viewholder{
+	width: 100%;
+	height: calc(100% - 41px);
+	margin: 0px;
+	padding: 10px 0px 0px 0px;
+	border-top: 1px solid #260d01;
+}
+
+div.multitabContainer div.viewholder div.oneview{
+	width: 100%;
+	height: 100%;
+	background-color: #F3C97F;
+	overflow: auto;
+}
+
+
+div#groupadministration div#groupadmin_settings{
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	display: flex;
+	flex-direction:column;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+div#groupadministration div#groupadmin_colors{
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+div#groupadministration div#groupadmin_colors div#onemptybtnholder span{
+	margin-right: 10px;
+	font-weight: bold;
+}
+
+div#groupadministration div#groupadmin_overview div.summary{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-content: flex-start;
+	overflow: hidden;
+}
+
+div#groupadministration div#groupadmin_overview div.summary p{
+	border-bottom: 2px solid #260d01;
+	display:block;
+	width: calc(100% - 2px);
+	min-width: 200px;
+}
+
+div#groupadministration div#groupadmin_overview div.summary td:first-child{
+	padding-right: 10px;
+	border-right: 1px dashed #260d01;
+	border-bottom: 1px dashed #260d01;
+}
+
+div#groupadministration div#groupadmin_overview div.summary tr:first-child{
+	border-top: 1px dashed #260d01;
+}
+
+div#groupadministration div#groupadmin_overview div.summary td:last-child{
+	border-right: 1px solid #260d01;
+	border-bottom: 1px dashed #260d01;
+	padding: 0px 10px 0px 10px;
+}
+
+div#groupadministration div#groupadmin_overview div.summary tr{
+	display:hidden;
+}
+
+div#groupadministration div#groupadmin_overview div.summary tr.line{
+	height: 1px;
+	background-color: #260d01;
+}
+
+div#groupadministration div#groupadmin_overview div.summary tr.line:first-child{
+	display: none;
+}
+
+div#groupadministration div#groupadmin_overview div.summary tr.correct{
+	color:#336600;
+}
+
+div#groupadministration div#groupadmin_overview div.summary tr.wrong{
+	color:#990000;
+}
+
+div#groupadministration div.squares_multicol_medium{
+	width: 200px;
+	height: auto;
+	margin: 0px 25px 0px 0px;
+	padding: 0px;
+}
+
+div#groupadministration div.squares_multicol_small{
+	width: 100px;
+	height: auto;
+	margin: 0px 25px 0px 0px;
+	padding: 0px;
+}
+
+div#groupadministration div.squares_colorrow{
+	width: 400px;
+	height: auto;
+	margin: 0px 25px 0px 0px;
+	padding: 0px;
+}
+
+div#groupadministration div.squares_auto{
+	width: auto;
+	height: auto;
+	margin: 0px;
+	padding: 0px 10px 0px 0px;
+}
+
+div#groupadministration div#groupadmin_overview{
+	height: calc(100% - 36px);
+	overflow: auto;
+}
+
+div#groupadministration div#groupadmin_overview div.buttonholder{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-content: space-between;
+	justify-content: space-between; 
+}
+
+div#groupadministration div.cstable{
+	width: auto;
+	height: auto;
+	margin: 0px;
+	padding: 10px;
+	display: table;
+	border: 1px dashed #260d01;
+}
+
+div#groupadministration div.cstable_head{
+	display: table-header-group;
+}
+
+div#groupadministration div.cstable_row{
+	display: table-row-group;
+}
+
+div#groupadministration div.cstable_cell{
+	display: table-cell;
+	padding-bottom: 5px;
+}
+
+div#groupadministration div.cstable_cell:first-child{
+	font-weight: bold;
+}
+
+div#groupadministration div.cstable_cell:nth-child(2){
+	padding-left:10px;
+}
+
+div#groupadministration div.cstable_cell:last-child{
+	padding-left:10px;
+}
+
+div#groupadministration div.cstable_row div.btnholder{
+	width: 100%;
+}
+
+div#groupadministration div.cstable_row div.btnholder button{
+	width: calc(50% - 4px);
+	margin: 0px;
+}
+
+
+div#groupadministration div.squares_lvlbtns{
+	width: 25px;
+	height: auto;
+	padding: 0px;
+	display: flex;
+	margin-top: 25px;
+	flex-direction:row;
+	flex-wrap: wrap;
+	align-content: space-between;
+	justify-content: space-between;
+}
+
+div#groupadministration div.squares_lvlbtns button{
+	width: 25px !important;
+	min-width: 25px !important;
+	margin: 5px 0px 0px 0px;
+}
+
+div#groupadministration div.squares_singelcol_flexdistribute{
+	width: 100%;
+	height: auto;
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	flex-direction:row;
+	flex-wrap: nowrap;
+	align-content: space-between;
+	justify-content: space-between;
+}
+
+
+div#groupadministration div.squares:last-child{
+	margin: 0px;
+}
+
+div#groupadministration input.gradmin{
+	width: calc(200px - 14px);
+	height: 22px;
+	border: 2px inset #260d01;
+	border-radius: 7px 7px 7px 7px;
+	background-color: #FFECCA;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: Verdana;
+	color: #543c15;
+	cursor: text;
+	margin: 0px;
+	padding: 0px 5px;
+}
+
+div#groupadministration input.gradmin_pxsize{
+	width: 50px !important;
+}
+
+div#groupadministration input.gradmin_hexcolorsize{
+	width: 60px !important;
+}
+
+div#groupadministration textarea.gradmin{
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Verdana;
+	background-color: #FFECCA;
+	color: #543c15;
+	border: 2px inset #8d411c;
+	border-radius: 7px 7px 7px 7px;
+	cursor: default;
+	resize: none;
+	text-align: left;
+	padding: 5px;
+	margin: 0px;
+	width: calc(200px - 14px);
+	height: 100px;
+	line-height: 12px;
+}
+
+div#groupadministration input.leveldesc{
+	height: 22px !important;
+	width: calc(100% - 10px) !important;
+}
+
+div.ask_windowholder{
+	max-width: 400px;
+	max-height: 400px;
+	z-index: 2000002;
+	height: auto;
+	width: auto;
+	position: absolute;
+	margin: 0px;
+	padding: 0px;
+	border-radius: 10px 10px 0px 0px;
+	border: 2px solid #260d01;
+	background-color: #F3C97F;
+	overflow: hidden;
+	cursor: default;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-size: 12px;
+	font-family: Verdana;
+	font-weight: normal;
+}
+
+div.ask_windowholder div.ask_flash{
+	display: hidden;
+	background-color: #260d01;
+}
+
+div.ask_windowholder div.ask_windowheader{
+	border-radius: 7px 7px 0px 0px;
+	padding: 0px;
+	margin: 0px;
+	text-indent: 10px;
+	line-height: 27px;
+	font-size: 14px;
+	font-family: Verdana;
+	font-weight: bold;
+	color: #F3C97F;
+	background-color: #8D411C;
+	cursor: move;
+	width: 100%;
+}
+
+div.ask_windowholder div.ask_windowcontent{
+	padding: 10px;
+}
+
+div.ask_windowholder div.ask_windowcontent_question{
+	display: block;
+	width: 100%;
+}
+
+div.ask_windowholder input{
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	width: 50%;
+}
+
+div.ask_windowholder div.ask_windowbtns{
+	padding: 5px 10px 10px 10px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-content: space-between;
+	justify-content: space-between; 
+}
