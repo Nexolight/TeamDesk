@@ -30,7 +30,7 @@ short helpful information as well as just for fun. Well at least it can do
 all what a pinwall can do - just a little bit more.
 
 
-About Securtiy & Access
+About security & access
 -----------------------
 Please keep this in mind. TeamDesk was never meant to be secure. It is
 a "share all you post" (with almost no limitation) web application.
