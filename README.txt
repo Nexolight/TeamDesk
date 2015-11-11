@@ -6,9 +6,9 @@ About functionality
 -------------------
 Teamdesk is the digital representation of a pinnwall with some extras.
 The idea behin is that every person on the same (per definition local)
-network can access the pinwalll to create, edot, remove, archive, or
+network can access the pinwalll to create, edit, remove, archive, or
 comment notes. The changes are visible in almost real time 
-(Push technology). Furthermore it TeamDesk allows the user to post
+(Push technology). Furthermore TeamDesk allows the user to post
 directly embeded multimedia stuff, like videos and images, as well as 
 attachments (any kind of files as download). This is possible via link
 as well as via upload.
@@ -26,7 +26,7 @@ TeamDesk was made for the purpose to be used in office or class rooms,
 as well as every place where an amount of 5-30 people come thogether.
 Different groups are possible when intended to be used for multiple
 groups in one slightly bigger environment. It can be used to provide
-short helpful information as well as just for fun. Well at least can do
+short helpful information as well as just for fun. Well at least it can do
 all what a pinwall can do - just a little bit more.
 
 
