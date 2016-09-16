@@ -1,3 +1,7 @@
+Beware: This is one of my first projects - The implementation is kind of... well
+Asume it's not secure nor efficient nor proper implemented. 
+However in terms of usage I'd say it's aweseome!
+
 ################################################################################
 # What is TeamDesk?                                                            #
 ################################################################################
