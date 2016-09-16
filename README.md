@@ -2,12 +2,13 @@ Beware: This is one of my first projects - The implementation is kind of... well
 Asume it's not secure nor efficient nor proper implemented. 
 However in terms of usage I'd say it's aweseome!
 
-################################################################################
+---
 # What is TeamDesk?                                                            #
-################################################################################
 
-About functionality
--------------------
+![alt tag](https://raw.githubusercontent.com/Nexolight/TeamDesk/master/gitmd/imagination.png)
+
+---
+## About functionality
 Teamdesk is the digital representation of a pinnwall with some extras.
 The idea behin is that every person on the same (per definition local)
 network can access the pinwalll to create, edit, remove, archive, or
@@ -23,9 +24,8 @@ depending on their setting. They may have some more specific behavour
 of the classic colorful post-it notes and additional functionality.
 The colors are editable by the admin
 
-
-About targeted End-Users
-------------------------
+---
+## About targeted End-Users
 TeamDesk was made for the purpose to be used in office or class rooms,
 as well as every place where an amount of 5-30 people come thogether.
 Different groups are possible when intended to be used for multiple
@@ -33,15 +33,13 @@ groups in one slightly bigger environment. It can be used to provide
 short helpful information as well as just for fun. Well at least it can do
 all what a pinwall can do - just a little bit more.
 
-
-About security & access
------------------------
+---
+## About security & access
 Please keep this in mind. TeamDesk was never meant to be secure. It is
 a "share all you post" (with almost no limitation) web application.
 
-
-About the Project
------------------
+---
+## About the Project
 Teamdesk was initiated at the beginning of January 2014 and was 
 actively developed until August 2015. A first level support employee called
 Lamoza Rodrigo gave me (At this time a software engineerer apprentice) 
@@ -56,9 +54,8 @@ sourcecode. At the time I've started this project I had absolutely no
 knowledge about Javascript, and Java EE environments. You may notice that
 - you would make it partial different as well as I would do it today.
 
-
-About licencing stuff (from my personal view)
---------------------------------------------
+---
+## About licencing stuff (from my personal view)
 This is it's own story. Scroll down if you're not interested in.
 I was not sure which licence I should choose. My intention was to make it 
 usuable for free for everyone (including the sourcecode) but I haven't wanted
@@ -69,10 +66,8 @@ Well I should say "we" since I made this project at work for the
 Federal Departement of Defence (Switzerland). Luckily they allowed me to
 choose a licence and publish this project under some conditions.
 
-
-################################################################################
-# Installation                                                                 #
-################################################################################
+---
+## Installation
 I don't got that much time at the moment so I will make it as short as 
 possible.
 
@@ -108,11 +103,8 @@ a.e. "server.mydomain:8080/Teamdesk_093_build_117"
 4.0 I hope you got it :) otherwise you can try to contact me. Depending
 on how many time I have left I will answer.
 
-
-################################################################################
-# Licence & Copyright                                                          #
-################################################################################
-
+---
+## Licence & Copyright
 Copyright (C) 2014-2015 Inc. All Rights Reserved.
 
 Federal Departement of Defence, Civil Protection and Sport,
@@ -122,7 +114,7 @@ Armed Forces Command Support Organisation
 
 Lucy von Känel - snow.dream.ch@gmail.com
 
----------------------------------------------------------------------
+---
 This Project (TeamDesk) is subject of the Artistic Licence 2.0.
 
 See LICENCE.txt or https://opensource.org/licenses/Artistic-2.0
@@ -131,6 +123,6 @@ The code comes "as is". There is no waranty about it's functionality,
 merchantability and / or fitness for a particular purpose. 
 No matter if expressed or implied.
 
----------------------------------------------------------------------
+---
   The licence may differ when explicitly stated in the dependent file
 (3th party libraries)
